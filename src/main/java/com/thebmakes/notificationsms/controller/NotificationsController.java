@@ -1,8 +1,7 @@
-package com.thebmakes.projectms.controller;
+package com.thebmakes.notificationsms.controller;
 
-import com.thebmakes.projectms.entity.Project;
-import com.thebmakes.projectms.repository.ProjectRepository;
-import com.thebmakes.projectms.service.ProjectService;
+import com.thebmakes.notificationsms.entity.Notification;
+import com.thebmakes.notificationsms.service.NotificationsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,14 +12,14 @@ import java.util.List;
 
 @RestController
 @CrossOrigin("*")
-@RequestMapping("/projects")
-public class ProjectController {
+@RequestMapping("/notifications")
+public class NotificationsController {
 
     @Autowired
-    private ProjectService projectService;
+    private NotificationsService notificationsService;
 
     @GetMapping("")
-    public List<Project> findAll() {
-        return projectService.findAll();
+    public List<Notification> findAll() {
+        return notificationsService.findAll();
     }
 }

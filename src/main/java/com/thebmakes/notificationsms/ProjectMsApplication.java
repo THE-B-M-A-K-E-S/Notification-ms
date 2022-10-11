@@ -1,4 +1,4 @@
-package com.thebmakes.projectms;
+package com.thebmakes.notificationsms;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;

@@ -1,4 +1,4 @@
 FROM openjdk:17
-EXPOSE 8082
-ADD target/project-ms.jar project-ms.jar
-ENTRYPOINT ["java", "-jar", "project-ms.jar"]
+EXPOSE 8084
+ADD target/notifs-ms.jar notifs-ms.jar
+ENTRYPOINT ["java", "-jar", "notifs-ms.jar"]

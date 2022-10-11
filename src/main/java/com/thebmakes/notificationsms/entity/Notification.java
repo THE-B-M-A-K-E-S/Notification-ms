@@ -1,4 +1,4 @@
-package com.thebmakes.projectms.entity;
+package com.thebmakes.notificationsms.entity;
 
 
 import lombok.AllArgsConstructor;
@@ -7,13 +7,14 @@ import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document("Projects")
+@Document("Notifications")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Project {
+public class Notification {
     @Id
     private String id;
-    private String name;
-    private String description;
+    private String title;
+    private String body;
+    private boolean isViewed;
 }

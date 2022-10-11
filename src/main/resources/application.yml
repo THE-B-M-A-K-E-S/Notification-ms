@@ -1,12 +1,12 @@
 server:
-  port: 8082
+  port: 8084
 spring:
   application:
-    name: project-ms
+    name: notifs-ms
   data:
     mongodb:
       uri: mongodb+srv://bassem:bassem@authentication.6mvbj9d.mongodb.net/?retryWrites=true&w=majority
-      database: projects
+      database: notifications
       auto-index-creation: true
   main:
     allow-circular-references: true
@@ -17,8 +17,8 @@ spring:
 eureka:
   client:
     service-url:
-#      defaultZone: http://localhost:8761/eureka/
-      defaultZone: http://172.17.0.2:8761/eureka/
+      defaultZone: http://localhost:8761/eureka/
+#      defaultZone: http://172.17.0.2:8761/eureka/
     fetch-registry: true
     register-with-eureka: true
   instance:
