@@ -21,7 +21,7 @@ public class ProjectMsApplication {
     @GetMapping("/health")
     public HashMap<String,String> health() {
         return new HashMap<String,String>() {{
-            put("message", "Project-ms is up and running on port: " + environment.getProperty("local.server.port") +" ☕🍵");
+            put("message", "Notifs-ms is up and running on port: " + environment.getProperty("local.server.port") +" ☕🍵");
         }};
     }
 
