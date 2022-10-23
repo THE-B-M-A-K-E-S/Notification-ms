@@ -13,7 +13,7 @@ import java.util.HashMap;
 @EnableEurekaClient
 @SpringBootApplication
 @RestController
-public class ProjectMsApplication {
+public class NotificationMsApplication {
 
     @Autowired
     private Environment environment;
@@ -21,12 +21,12 @@ public class ProjectMsApplication {
     @GetMapping("/health")
     public HashMap<String,String> health() {
         return new HashMap<String,String>() {{
-            put("message", "Notifs-ms is up and running on port: " + environment.getProperty("local.server.port") +" ☕🍵");
+            put("message", "Notification-ms is up and running on port: " + environment.getProperty("local.server.port") +" ☕🍵");
         }};
     }
 
     public static void main(String[] args) {
-        SpringApplication.run(ProjectMsApplication.class, args);
+        SpringApplication.run(NotificationMsApplication.class, args);
     }
 
 }
