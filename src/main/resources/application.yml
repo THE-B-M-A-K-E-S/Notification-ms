@@ -1,11 +1,12 @@
 server:
   port: 8084
+  forward-headers-strategy: framework
 spring:
   application:
     name: notifs-ms
   data:
     mongodb:
-      uri: mongodb+srv://bassem:bassem@authentication.6mvbj9d.mongodb.net/?retryWrites=true&w=majority
+      uri: mongodb://bassem:bassem@ac-wxvf7j2-shard-00-00.6mvbj9d.mongodb.net:27017,ac-wxvf7j2-shard-00-01.6mvbj9d.mongodb.net:27017,ac-wxvf7j2-shard-00-02.6mvbj9d.mongodb.net:27017/?ssl=true&replicaSet=atlas-f10aon-shard-0&authSource=admin&retryWrites=true&w=majority
       database: notifications
       auto-index-creation: true
   main:
@@ -18,6 +19,7 @@ eureka:
   client:
     service-url:
       defaultZone: http://172.20.0.10:8761/eureka/
+#      defaultZone: http://localhost:8761/eureka/
     fetch-registry: true
     register-with-eureka: true
   instance:
@@ -30,3 +32,7 @@ management:
   info:
     env:
       enabled: true
+
+springdoc:
+  swagger-ui:
+    path: /docs
